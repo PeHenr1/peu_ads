@@ -37,10 +37,15 @@ if ((a+d)-(b+c)) < menorDif:
 print(menorDif)
 '''
 
-
+'''
 #Exercício 03 - Média ou mediana
-n1 = int(input("Digite:"))
-n2 = int(input("Digite:"))
+a = int(input("Digite:"))
+b = int(input("Digite:"))
+'''
+
+
+#Exercicio 04 - Piloto Automático
+
 
 
 
