@@ -61,7 +61,7 @@ print(t2.islower())
 print(t2.isupper())
 '''
 '''
-entrada='54987'
+entrada='-54987'
 if entrada.isdigit():
     print('A entrada corresponde ao numero', int(entrada))
 else:
@@ -124,14 +124,16 @@ print(f'A ultima ocorrencia da letra digitada é {pos}')
 '''
 
 '''
-#Exercicios 05
+#Exercicios 06
 f = input('Digite uma frase:')
 l = input('Digite uma letra:')
 pos = 0
+achou = False
 for letra in range (len(f)):
-    if f[letra] == l:
+    if f[letra] == l and achou == False:
         pos = letra
-print(f[:pos]+f[pos+1:])
+        achou = True
+print(f[0:pos]+f[pos+1:])
 '''
 
 '''
@@ -142,7 +144,6 @@ pos = 0
 for letra in range (len(f)):
     if f[letra] == l:
         pos = letra
-        break
 print(f[:pos]+f[pos+1:])
 '''
 '''
@@ -211,5 +212,94 @@ print(f'O: {quantO}')
 print(f'U: {quantU}')
 '''
 
+'''
 #Exercicio 12
-n = int(input("Digite um número inteiro positivo ou negativo:"))
+n = input("Digite um número inteiro positivo ou negativo:")
+if n.isdigit():
+    print(len(n))
+else:
+    print(len(n)-1)
+'''
+
+'''
+#Exercicio 13
+texto = " Iracema – a lenda do Ceará "
+
+# A
+print(texto.upper())
+
+# B
+print(texto[:2].upper()+texto[2:].lower())
+
+# C
+novo1 = ""
+for l in texto:
+    if 
+
+# D
+novo2 = ''
+for l in texto:
+    if l != ' ':
+        novo2 += l
+    else:
+        novo2 += '#'
+print(novo2)
+
+# E
+tam = len(texto)-1
+print(texto[:tam]+'*')
+
+# F
+tam = len(texto)
+novo4 = texto[1:tam-1]
+print(novo4)
+
+# G
+pos = 0
+achou = False
+for l in range (len(texto)):
+    if texto[l] == 'a' and achou == False:
+        pos = l
+        achou = True
+print(pos)
+
+# H
+pos = 0
+for l in range (len(texto)):
+    if texto[l] == 'a':
+        pos = l
+print(pos)
+
+# I
+cont = 0
+for l in texto:
+    if l == 'e':
+        cont += 1
+print(cont)
+
+# J
+novo5 = ""
+for l in texto:
+    if l.islower():
+        novo5 = novo5 + l.upper()
+    elif l.isupper():
+        novo5 = novo5 + l.lower()
+    else:
+        novo5 = novo5 + l
+print(novo5)
+'''
+
+#Exercicio 14
+t = input("Digite uma sequência de caracteres:")
+saida = ''
+ant = t[0]
+i = 0
+while i < len(t):
+    if ant == t[i]:
+        saida += t[i]
+        ant = t[i]
+    else:
+        ant = t[i]
+        print(saida)
+        saida = ''
+    i += 1
