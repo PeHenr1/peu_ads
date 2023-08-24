@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <h1>Âncoras</h1>
+    <!-- target="_blank" - abre uma pagina na hora de abrir a propria pagina -->
+
+    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D" title="Clique aqui rsrs">Link teste</a>
+
+    <!-- com o # redireciona para o paragrafo ou para o local designado
+         sem o # vai é normal, link -->
+    <a href="#primeiro_paragrafo">Va para o primeiro paragrafo</a>
+    <p id="primeiro_paragrafo">...</p>
+
+    <!-- tem como juntar isso, mandando para outra pagina ja acessando um local especifico -->
+    <a href="endereço.html#id_especifico" title="Não tem nada aqui">.</a>
+
+    <hr>
+
+    <h1>Formulários</h1>
+        <!--
+             action - especifica pra onde vao as info que tu vai envia
+                - se nao colocar nada ele vai mandar pra pagina mesmo (default)
+             method - GET & POST 
+                - por default é get
+         -->
+    <form action="aula2308.html" method="GET">
+        <p>Digite seus dados abaixo</p>
+        <input type="text" name="nome" placeholder="Digite seu nome" value="Fulano">
+        <input type="text" name="CPF" minlength="5" maxlength="11" placeholder="Digite seu CPF" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
