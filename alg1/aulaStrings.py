@@ -288,18 +288,60 @@ for l in texto:
         novo5 = novo5 + l
 print(novo5)
 '''
-
+'''
 #Exercicio 14
 t = input("Digite uma sequência de caracteres:")
 saida = ''
-ant = t[0]
-i = 0
+ant = t[0]     #aaabbbc
+
+i = 0          #0123456
 while i < len(t):
     if ant == t[i]:
         saida += t[i]
         ant = t[i]
     else:
-        ant = t[i]
         print(saida)
-        saida = ''
+        ant = t[i]
+        saida = t[i]
     i += 1
+if saida != '':
+    print(saida)
+''' 
+'''
+#Exercicio 15
+p = input("Digite uma palavra:")
+pinv = ''
+tam = len(p)-1
+podePrintar = True
+while tam >= 0:
+    if p[tam] != ' ' and p[tam].islower():
+        pinv = pinv + p[tam]
+        tam = tam - 1
+    else:
+        podePrintar = False
+if podePrintar:
+    if p == pinv:
+        print('Sim')
+    else:
+        print('Não')
+'''
+'''
+#Exercicio 16
+a = input("Digite uma palavra:").lower()
+b = input("Digite outra palavra:").lower()
+tem1 = True
+tem2 = True
+if len(a) == len(b):
+    for letra in a:
+        if letra not in b:
+            tem1 = False
+    for letrb in b:
+        if letrb not in a:
+            tem2 = False
+    if tem1 and tem2:
+        print('Sim')
+    else:
+        print('Não')
+else:
+    print('Não')
+''' 
