@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Exercício Prático 02</title>
+    <!--
+        Pedro Henrique Aissa SC3039048
+        Rafael Domingues Prendin SC3039145
+     -->
+</head>
+<body>
+   <form action="exePratico02.html" method="get">
+    <p>Nome: <input type="text" name="nome" minlength="4" placeholder="Preencha seu nome completo" required> </p>
+    <p>Altura: <input type="number" name="altura" min="0.5" max="2.5" step="0.01" required> </p>  
+    <p>Data de Nascimento: <input type="date" name="dataNascimento" min="2023-09-01" max="2023-09-30" required> </p>   
+    <p>Senha: <input type="password" name="senhaUsuário" minlength="4" maxlength="6" required> </p>
+    <p>Estado Civil:
+    <select name="estado_civil">
+        <option value="1">---</option>
+        <option value="2" selected>Solteiro</option>
+        <option value="3">Casado</option>
+        <option value="4">Divorciado</option>
+        <option value="5">Viúvo</option>
+    </select>
+    </p>
+
+    <input type="file" name="fotoPerfil" accept=".jpg">
+
+    <p>Horário: 
+    <input type="time" name="horario" required min="08:00" max="18:00"> </p>
+    
+    <p>Maioridade:
+    <input type="radio" id="maiorIdadeSim" name="maioridade" value="Sim" checked>
+    <label for="maiorIdadeSim">Sou maior de idade</label>
+    
+    <input type="radio" id="maiorIdadeNao" name="maioridade" value="Não">
+    <label for="maiorIdadeNao">Não sou maior de idade</label>
+    </p>
+
+        
+
+    <input type="submit" name="Cadastrar" value="Cadastrar">
+    <input type="reset" name="Limpar" value="Limpar">
+
+   </form>
+</body>
+</html>
