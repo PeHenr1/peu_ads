@@ -270,6 +270,7 @@ opc = int(input('Digite a opção desejada:'))
 while opc != 6:
     if opc == 1:
         nome = input("Nome do contato:")
+        # verificar se o contato ja está cadastrado
         agenda.append(nome)
         telefones = []
         tel = input("Telefone:")
