@@ -183,18 +183,175 @@ def conta(b,e):
 base = int(input("Digite um nº:"))
 exp = input('Digite um expoente:')
 print(conta(base,exp))
-'''
 
-#Exercicio 13    # lista tem q ser feita pelo usuario
+
+#Exercicio 13    
 def soma(lista):
     soma = 0
     for e in lista:
         soma += e
     return soma
 
-L = [1,2,3]
-'''n = float(input("Digite um nº:"))
+L = []
+n = float(input("Digite um nº:"))
 while n != '':
-    L.append(n)
-    n = float(input("Digite um nº:"))'''
+    L.append(float(n))
+    n = input("Digite um nº:")
 print(soma(L))
+
+
+#Exercicio 14
+def produto(lista):
+    soma = 1
+    for e in lista:
+        soma *= e
+    return soma
+
+L = []
+n = float(input("Digite um nº:"))
+while n != '':
+    L.append(float(n))
+    n = input("Digite um nº:")
+print(produto(L))
+
+
+#Exercicio 15
+def maior(lista):
+    maior = 0
+    pos = 0
+    for i in range(len(lista)):
+        if lista[i] > maior:
+            maior = lista[i]
+            pos = i
+    return maior, pos
+
+L = []
+n = float(input("Digite um nº:"))
+while n != '':
+    L.append(float(n))
+    n = input("Digite um nº:")
+print(L)
+print('Maior nº e respectiva posição na lista:',maior(L))
+
+
+#Exercicio 16
+def ordenar(lista):
+    ordenada = []
+    tam = len(lista)
+    pos = 0
+    while len(ordenada) != tam:
+        menor = lista[len(lista)-1]  #pega ultimo elemento
+        pos = len(lista)-1
+        for i in range(len(lista)-1,-1,-1): 
+            if lista[i] < menor:
+                menor = lista[i]
+                pos = i
+        ordenada.append(menor)
+        del lista[pos]
+        
+    return ordenada
+
+L = []
+n = float(input("Digite um nº:"))
+while n != '':
+    L.append(float(n))
+    n = input("Digite um nº:")
+print('Lista:', L)
+print('Lista ordenada:',ordenar(L))
+
+
+#Exercicio 17
+def media(lista):
+    media = 0
+    soma = 0
+    for e in lista: 
+        soma += e
+    media = soma/len(lista)
+    return media
+
+L = []
+n = input("Digite um nº:")
+while n != '':
+    L.append(float(n))
+    n = input("Digite um nº:")
+print('Lista:', L)
+print('Média dos valores:',media(L))
+
+
+#Exercicio 18
+def menor(lista):
+    menor = lista[0]
+    pos = 0
+    for i in range(len(lista)):
+        if lista[i] < menor:
+            menor = lista[i]
+            pos = i
+    return menor, pos
+
+L = []
+n = float(input("Digite um nº:"))
+while n != '':
+    L.append(float(n))
+    n = input("Digite um nº:")
+print(L)
+print('Menor nº e respectiva posição na lista:',menor(L))
+
+
+#Exercicio 19
+def ordenar(lista):
+    ordenada = []
+    tam = len(lista)
+    pos = 0
+    while len(ordenada) != tam:
+        maior = lista[len(lista)-1]  #pega ultimo elemento
+        pos = len(lista)-1
+        for i in range(len(lista)-1,-1,-1): 
+            if lista[i] > maior:
+                maior = lista[i]
+                pos = i
+        ordenada.append(maior)
+        del lista[pos]
+        
+    return ordenada
+
+L = []
+n = float(input("Digite um nº:"))
+while n != '':
+    L.append(float(n))
+    n = input("Digite um nº:")
+print('Lista:', L)
+print('Lista ordenada:',ordenar(L))
+
+
+#Exercicio 20
+def anagrama(s1,s2):
+    #DA ERRO COM O EXEMPLO OVO VOV
+    #sim1 = False
+    #sim2 = False
+    #for e in s1:
+    #    if e in s2:
+    #        sim1 = True
+    #    else:
+    #        sim1 = False
+    #for e in s2:
+    #    if e in s1:
+    #        sim2 = True
+    #    else:
+    #        sim2 = False
+    #if sim1 and sim2:
+    #    return True
+    #else:
+    #    return False
+
+    so1 = sorted(s1)
+    so2 = sorted(s2)
+    if so1 == so2:
+        return True
+    else:
+        return False
+            
+str1 = input('Digite uma palavra:')
+str2 = input('Digite outra palavra:')
+print("As palavras são anagramas?")
+print(anagrama(str1,str2))
+'''
