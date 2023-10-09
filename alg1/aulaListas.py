@@ -225,12 +225,14 @@ while string != 'fim':
     string = input("Digite algo ('fim' para encerrar):")
 maior = len(lista[0])
 menor = len(lista[0])
-pMaior, pMenor = '',''
+pMaior, pMenor = lista[0],lista[0]
 for s in range(len(lista[1:])):
     if len(lista[s]) > maior:
         pMaior = lista[s]
+        maior = len(lista[s]) 
     elif len(lista[s]) < menor:
         pMenor = lista[s]
+        menor = len(lista[s])
 print(f"Maior string: '{pMaior}'\nMenor string: '{pMenor}'")
 
 
