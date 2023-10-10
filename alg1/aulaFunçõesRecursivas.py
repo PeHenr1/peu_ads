@@ -9,12 +9,129 @@ nro=int(input('Digite o termo da sequência de Fibonacci: '))
 if nro < 0:
     print("O número deve ser maior ou igual a zero!")
 else:
-    print(termo_fibonacci(nro))
-'''
+    print(termo_fibonacci(nro))
+
+
 
 def sequencia_fibonacci(a, b, n):
     print(a," ",end="")
     if b < n:
         sequencia_fibonacci(b, a + b, n)
 nro=int(input('Digite o valor de parada da sequência de Fibonacci: '))
-sequencia_fibonacci(0,1,nro)
+sequencia_fibonacci(0,1,nro)
+'''
+#Exercicio 01
+'''
+def fatorial(n):
+    fat = 1
+    while n != 0:
+        fat = fat * n
+        n -= 1
+    return fat
+
+def fat_recursiva(n):
+    if n == 1 or n == 0:
+        return 1
+    
+    return n * fat_recursiva(n-1)
+        
+    
+num = int(input("Digite um número fatorial recursiva:"))
+print(fatorial(num))
+print(fat_recursiva(num))
+'''
+
+#Exercicio 02
+'''
+def potencia(bas,pot):
+    r = 1
+    for i in range(pot):
+        r = r * bas
+    return r
+
+def pot_recursiva(bas,pot):
+    if bas == 1 or pot == 1:
+        return bas
+
+    return bas * pot_recursiva(bas,pot-1)
+
+x = int(input("Digite um número base:"))
+y = int(input("Digite um número potência:"))
+print(potencia(x,y))
+print(pot_recursiva(x,y))
+'''
+
+#Exercicio 03
+'''
+def quociente(num,div):
+    q = 0
+    while num >= div:
+        num = num - div
+        q += 1
+    return q
+
+def quoc_recursiva(num,div):
+    if num < div:
+        return 0
+    
+    return 1+quociente(num-div,div)
+    
+n = int(input("Número:"))
+d = int(input("Dividido por:"))
+print(quociente(n,d))
+print(quoc_recursiva(n,d))
+'''
+
+#Exercicio 04
+'''def resto(num,div):
+    while num >= div:
+        num = num - div
+    return num
+
+def resto_recursiva(num,div):
+    if num < div:
+        return num
+    
+    return resto_recursiva(num-div,div)
+    
+n = int(input("Número:"))
+d = int(input("Dividido por:"))
+#print(resto(n,d))
+print(resto_recursiva(n,d))
+'''
+
+#Exercicio 05
+'''
+def contar(p):
+    i = 0
+    for e in p:
+        i += 1
+    return i
+
+def contar_recursiva(p):
+    if len(p) == 0:
+        return 0
+
+    return 1+contar_recursiva(p[1:])
+
+palavra = input("Digite uma palavra:")
+#print(contar(palavra))
+print(contar_recursiva(palavra))
+'''
+
+#Exercicio 06
+'''def exibe(p):
+    for e in p:
+        print(e)'''
+
+def exibe_recursiva(p):
+    if len(p) == 0:
+        return 0
+    
+    print(p[0])
+    exibe_recursiva(p[1:])
+
+palavra = input("Digite uma palavra:")
+#exibe(palavra)
+exibe_recursiva(palavra)
+
