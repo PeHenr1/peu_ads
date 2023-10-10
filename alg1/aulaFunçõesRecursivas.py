@@ -120,9 +120,10 @@ print(contar_recursiva(palavra))
 '''
 
 #Exercicio 06
-'''def exibe(p):
+'''
+def exibe(p):
     for e in p:
-        print(e)'''
+        print(e)
 
 def exibe_recursiva(p):
     if len(p) == 0:
@@ -132,6 +133,71 @@ def exibe_recursiva(p):
     exibe_recursiva(p[1:])
 
 palavra = input("Digite uma palavra:")
-#exibe(palavra)
-exibe_recursiva(palavra)
+exibe(palavra)
+#exibe_recursiva(palavra)
+'''
+
+#Exercicio 07
+'''
+def algarismo(n):
+    while n != 0:
+        print(n%10)
+        n = n // 10
+        
+def alg_recursiva(n):
+    if n == 0:
+       return n
+
+    print(n%10)
+    return alg_recursiva(n//10)
+
+num = int(input("Digite um número:"))
+#algarismo(num)
+alg_recursiva(num)'''
+
+#Exercicio 08
+'''Crie uma função para exibir os algarismos de um número positivo na
+ordem correta. Não é permitida a conversão para string. Exemplo: 326'''
+'''def algarismo(n):
+    alg = []
+    #cria uma lista com os N invertido
+    while n != 0:
+        r = n % 10
+        alg.append(r)
+        n = n // 10
+    #printa na ordem correta, percorrendo de tras pra frente
+    for i in range(len(alg)-1,-1,-1):
+        print(alg[i])
+    
+def alg_recursiva(n):
+    if n == 0:
+       return  
+    alg_recursiva(n//10)
+    print(n%10)
+        
+
+num = int(input("Digite um número:"))
+algarismo(num)
+alg_recursiva(num)'''
+
+#Exercicio 09
+def maior(lista):
+    m = 0
+    for i in lista:
+        if i > m:
+            m = i
+    return m
+
+def maior_recursiva(lista,m): #nao entendi
+    if len(lista) == 1:
+        return lista[0]
+    if lista[0] > m:
+        m = lista[0]
+    maior_recursiva(lista[1:],m)
+
+L = [1,3,8,5,6]
+M = L[0]
+#print(maior(L))
+print(maior_recursiva(L,M))
+
 
