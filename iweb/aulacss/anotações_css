@@ -1,0 +1,9 @@
+ordem de importância na hora de pegar o css:
+1. !important               ex: color:blue !important;
+2. css direto na tag        ex: <a style="color:red;">
+3. #id                      
+4. .class
+5. tag em si
+
+
+
