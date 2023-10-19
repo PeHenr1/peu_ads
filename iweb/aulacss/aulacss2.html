@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div p{
+            color: red;
+        }
+        div{
+            color: purple;
+        }
+        p > b{
+            color: green;
+        }
+        p + p{
+            color: rgb(255, 0, 212);
+        }
+        div ~ pre{
+            color: cyan;
+        }
+        h1:hover, pre:hover{
+            background-color: pink;
+        }
+    </style>
+</head>
+    <!--
+        ordem de importância na hora de pegar o css:
+        1. !important               ex: color:blue !important;
+        2. css direto na tag        ex: <a style="color:red;">
+        3. #id                      
+        4. .class
+        5. tag em si
+
+        tag, tag - uma ou outra
+        tag1 tag2 tag3 - todas as tag3 dentro das tag2 dentro da tag1 
+        p~p - exclui o primeiro p e pega todos os irmão seguinte
+        div p - pega todos os p dentro da div
+        div > p - todo p filho direto (que ta dentro da SÓ na div)
+        p + p - pega o elemento p seguinte (proximo irmao imediato)
+
+        *ver SELETORES nos slides
+        *:PSEUDOSELETORES, ver slides, ex: :hover :valid :invalid :required  
+    -->
+<body>
+    <h1>Oi</h1>
+    <div>
+        <b>negrito</b>
+        <p>A</p>
+        <p>B <b>negrito</b> </p>
+        escrevi algo
+        <br>
+        <p>C <b>negrito</b> </p>
+    </div>
+    <pre>Olá</pre>
+    <p>D</p>
+    <p>E <b>negrito</b></p>
+    
+</body>
+</html>
