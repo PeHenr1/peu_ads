@@ -1,0 +1,61 @@
+#cabeçalho{
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 149, 255);
+    font-size: 200%;
+    padding: 5px;
+}
+
+#cabeçalho:hover {
+    background-color: blue;
+}
+
+#personagens{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 50px;
+    box-shadow: 10px 15px grey;
+    margin: auto;
+}
+
+.tab{
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+#finn{
+    border:1px solid black;
+    display: flex;
+}
+
+img{
+    width: 174px;
+    height: 252px;
+}
+
+.imgtab{
+    width: 150px;
+    height: 150px;
+}
+
+#meio{
+    display: flex;
+    margin: 50px;
+}
+
+#rodape{
+    background-color: rgb(0, 149, 255);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    padding: 5px;
+}
+
+#rodape:hover {
+    color: black;
+}
+
+li{
+    margin-top: 5px;
+}
