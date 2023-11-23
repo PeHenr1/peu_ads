@@ -1,0 +1,4 @@
+1	Camiseta	99.99	40
+2	Tênis	49.99	30
+3	Boné	9.99	100
+4	caderno	11.9	200
