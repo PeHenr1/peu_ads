@@ -189,11 +189,11 @@ def maior(lista):
     return m
 
 def maior_recursiva(lista,m): #nao entendi
-    if len(lista) == 1:
-        return lista[0]
+    if len(lista) == 0:
+        return m
     if lista[0] > m:
         m = lista[0]
-    maior_recursiva(lista[1:],m)
+    return maior_recursiva(lista[1:],m)
 
 L = [1,3,8,5,6]
 M = L[0]

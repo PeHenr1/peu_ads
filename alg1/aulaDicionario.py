@@ -45,7 +45,7 @@ for k in frutas_preço:
     print(f'Fruta {k} é vendida por {frutas_preço[k]}.')
 print()
 '''
-
+'''
 IGNORE = ' .,;:?!\t\n'
 def main():
     frase = input("Digite uma frase: ")
@@ -64,4 +64,27 @@ def main():
         print(i,":",letra[i])
 
 main()
+'''
+'''
+d1 = {"Joao": 10, "Maria":20}
+d2 = d1.copy()
+d2["Pedro"] = 30
+d1["Joao"] = 40
+print(d1)
+# saída: {"Joao": 40,"Maria": 20}
+print(d2)
+# saída: {"Pedro": 30,"Joao": 10,"Maria": 20}
+'''
+'''
+
+d1 = {"Joao":[1,2], "Maria":[3,4]}
+d2 = d1.copy()
+d2["Pedro"]=[5,6]
+d1["Joao"] += [3]
+print(d1)
+# saída: {"Joao": [1, 2, 3], "Maria": [3, 4]}
+print(d2)
+# saída{"Pedro": [5, 6],"Joao": [1, 2,3],"Maria":[3, 4]}  NAO DEVIA TER O 3 NO JOAO
+'''
+
 

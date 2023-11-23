@@ -64,7 +64,7 @@ class Contato:
         else:
             print('Nenhum telefone registrado para esse contato')
 
-def Agenda:
+class Agenda:
     contatos = []
 
     def incluir_contato(self,contato):

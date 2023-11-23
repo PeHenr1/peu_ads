@@ -1,0 +1,3 @@
+SC180100	Aluno 1	aluno1@ifsp.edu.br
+SC180200	Aluno 2	aluno2@ifsp.edu.br
+SC180300	Aluno 3	aluno3@ifsp.edu.br
