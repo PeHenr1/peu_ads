@@ -109,3 +109,14 @@ biblioteca <math.h>
 – floor(X): arredonda um número real para baixo Ex: ceil(3.2) = 3
 – sqrt(X): calcula a raiz quadrada de X
 – cbrt(X): calcula a raiz cúbica de X
+
+============================================================
+
+SINTAXE
+switch(variavel):
+	case x:
+		blablabla
+	case y:
+		blablabla
+	default:
+		blablabla
