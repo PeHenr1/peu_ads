@@ -1,0 +1,111 @@
+inicialmente o CÓDIGO FONTE (seu programa) é compilado - já verifica se há erros e se houver, ja mostra antes mesmo de terminar de compilar
+em seguida é gerado o CÓDIGO OBJETO que vai LINKAR com bibliotecas necessárias pra poder executar o programa, gerando o CÓDIGO EXECUTÁVEL ".exe"
+
+função main() --> FUNÇÃO PRINCIPAL
+
+qualquer variável dentro de uma função é uma variavel local, de resto é variável global
+
+============================================================
+EXEMPLO: 
+
+#include <nome_biblioteca>
+
+declaração de variável global
+
+tipo retorno main()
+{ bloco de comando }
+
+tipo de retorno f1(lista de parâmetros)
+{ bloco de comando }
+
+...
+
+tipo de retorno fn(lista de parâmetros)
+{ bloco de comando }
+
+============================================================
+
+TIPO
+      char - 1 caractere 				char a = 'A';
+      int - num inteiro					int b = 12;
+      float - numero real com precisao simples		float c = 2.34f;
+      double - numero real com precisao dupla 	 	double d = 2.34;
+
+      void "permite fazer funções que não retornam nada e funções que não têm parâmetros"
+
+caractere - aspas simples ' ' // "string" - aspas duplas ""
+
+============================================================
+
+MODIFICADORES DE TIPOS
+      signed: num com sinal
+      unsigned: num apenas +
+      long: aumenta precisão
+      short: reduz precisão
+
+ex: 	int normal:
+	Valores de -32768 até 32767
+
+	unsigned int:
+	Valores de 0 a 65535
+
+============================================================
+
+0 é falso e qualquer outra porra é verdadeiro
+
+	NEGAÇÃO !  //  E &&  //  OU || 
+
+============================================================
+
+COMENTÁRIO
+
+// 	uma linha
+/* */ 	várias linhas
+
+============================================================
+
+COMANDOS DE ENTRADA
+
+SCANF
+- problemático com string "carlos josé" só pega carlos
+- Sintaxe: scanf(“formato”, &variável);
+!!!!!!!! SEMPRE USE SCANF("formato"%*c, &variável) PRA DESCARTAR O ENTER !!!!!!!! 
+
+GETS
+- pega tudo
+- gets(nome)
+ex: 
+     char nome[30]; (consegue armazenar 29 caracteres, se nao tiver nada é só 1)
+     gets(nome);
+     printf("nome: %s \n", nome);
+	
+
+COMANDO DE SÁIDA
+
+printf()
+
+============================================================
+
+MÁSCARAS DE FORMATAÇÃO
+
+ Símbolo ‘%’ seguido de uma letra:
+
+– %c Caractere
+– %d Inteiros com sinal
+- %s Cadeia de caracteres (strings) PREFIRA O GETS!
+– %u Inteiros sem sinal
+– %f Números reais (float)
+– %lf Números reais (double ou long float)
+– %e Notação científica
+– %x Números em hexadecimal
+
+============================================================
+
+FUNÇÕES MATEMÁTICAS
+
+biblioteca <math.h>
+
+- ceil(X): arredonda um número real para cima   EX: ceil(3.2) = 4
+– floor(X): arredonda um número real para baixo Ex: ceil(3.2) = 3
+– sqrt(X): calcula a raiz quadrada de X
+– cbrt(X): calcula a raiz cúbica de X
