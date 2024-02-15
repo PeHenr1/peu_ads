@@ -1,0 +1,17 @@
+// Atividade 0 - SOPE
+
+1. 
+  Seria bastante limitado e complicado para os usuarios, por ser o software que gerencia e fornece uma interface pra facilitar a interação do usuário.
+Sendo assim, a principal função de um sistema operacional é fornecer uma interface entre hardware computador e os apps de software, além de gerenciar o processador, memória, dispositivos de entrada e saída, entre outros.
+
+2.
+  É um software que age entre hardware e aplicativos de software, sendo uma camada intermediária para fornecer uma interface ao usuário interagir com o computador, por exemplo, de forma facilitada. É fundamental para proporcionar uma plataforma estável e de fácil uso.
+
+3. 
+  ii) É incorreto afirmar que " define as formas pelas quais os recursos de hardwares são utilizados para resolver os problemas de computação dos usuários"
+pois na verdade um s.o irá gerenciar os recursos do hardware, mas não define como esses recursos serão utilizados para resolver problemas específicos do usuário.
+  iii) É incorreto afirmar porque, na verdade, os programas e aplicativos utilizam os serviços fornecidos pelo Sistema Operacional para acessar o hardware do sistema, que garante o acesso aos recursosde forma segura e eficiente, evitando conflitos entre os diversos programas aplicativos e usuários. 
+
+4.
+  alocador de recursos - gerenciar e distribuir os recursos de hardware, como CPU, memória, etc;
+  programa de controle - 
