@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 16/02</title>
+</head>
+<body>
+    <!--
+    <script>
+        var nome = "IFSP"           //padrão      da pra acessar fora do escopo {}   -- faz o içamento 'undefined'
+        let ano = 2024              //padrão RECOMENDADO   -- nao da pra acessar fora do escopo {}
+        const campus = "São Carlos" //constante -- nao da pra acessar fora do escopo {}  -- seu valor nao será alterado durante o uso
+        estudante = true            //boolean
+        // nome = "IFSP"              variável global, nao recomendado
+    </script>
+    -->
+    <script>
+        // Celsius to Fahrenheit
+        let c, f;
+        for(c = -30; c <= 150; c+=10){
+            f = (c*9/5) + 32
+            console.log(c + "°C = " + f + "°F")
+        }
+
+        //fibonacci
+        let n = prompt("Digite um número")
+        let Fi = 0;
+        let ant = 1; 
+        let antant = 0;
+        //let Fi = 0, ant = 1, antant = 0;
+        if(n > 0){
+            while( n !== 0 ){
+                Fi = Fi + antant
+                antant = ant
+                ant = Fi
+                n -= 1
+                console.log(Fi)
+            }
+        }
+        else{
+            alert("Valor digitado inválido")
+        }
+    </script>
+</body>
+</html>
