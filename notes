@@ -13,5 +13,24 @@ pois na verdade um s.o irá gerenciar os recursos do hardware, mas não define c
   iii) É incorreto afirmar porque, na verdade, os programas e aplicativos utilizam os serviços fornecidos pelo Sistema Operacional para acessar o hardware do sistema, que garante o acesso aos recursosde forma segura e eficiente, evitando conflitos entre os diversos programas aplicativos e usuários. 
 
 4.
-  alocador de recursos - gerenciar e distribuir os recursos de hardware, como CPU, memória, etc;
-  programa de controle - 
+  alocador de recursos - gerenciar e distribuir os recursos de hardware, como CPU, memória, etc; além de implementar algoritmos de alocação eficientes para garantir que os recursos sejam utilizados de forma justa e eficaz
+  programa de controle - coordenar e supervisionar as operações do sistema,  garantindo que as operações sejam realizadas de acordo com as políticas definidas e as restrições do sistema
+
+5. 
+Bootstrap é um componente essencial para iniciar o funcionamento de um computador, armazenado em um local específico e de fácil acesso para o hardware, como a placa-mãe. É o primeira programa a ser executado quando se liga um computador, cuja função é iniciar o processo de inicialização do sistema.
+Esse processo é resumido da seguinte forma: 
+- inicialização do hardware: série de verificações e inicializações que garantem a funcionalidade dos componentes (memória, periféricos, entre outros essenciais)
+- localização do bootstrap
+- execução do bootstrap: onde ele é carregado na memória e executado, iniciando o carregamento do s.o;
+- carregamento do sistema operacional: os arquivos necessários do sistema operacional no armazenamento (como o kernel) são localizados e carregados na memória para que o sistema operacional seja iniciado
+
+6. 
+F V F F
+
+7. Algumas das principais categorias são, Sistemas Operacionais:
+- de Computadores Pessoais (PCs), como Windows, macOS e Linux
+- de Servidores: serviços em rede, como Windows Server, Unix, etc.
+- de Dispositivos Móveis: smartphones e tablets, incluindo Android, iOS 
+- Embarcados?
+- de Tempo Real:  sistemas de controle de aeronaves, equipamentos médicos, sistemas automotivos, etc
+- de Mainframe:  organizações para processamento de dados em massa, como IBM z/OS.
