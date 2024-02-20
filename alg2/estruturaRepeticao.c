@@ -1,0 +1,160 @@
+#include <stdio.h>
+
+/*
+int main(){
+	int i;
+	
+	for (i=0; i<=20; i++)
+	{
+		if(i >= 8 && i <= 14 )
+		{
+			printf("Nao vou exibir...\n");
+			continue; //pula o print e vai direto pra proxima repetição
+		}
+		
+		printf("Valode de i: %d\n",i);
+	}
+}
+*/
+
+// Exercicio 01
+/*
+int main(){
+	int time = 1;
+	float mediaAltura, oitenta;
+	do{
+		printf("\nTIME %d:\n",time);
+		int menorD = 0;
+		float mediaIdade = 0;
+		
+		int jogador;
+		for(jogador = 0; jogador < 2; jogador++){
+			int idade = 0;
+			float peso = 0, altura = 0;
+			
+			printf("Idade: ");
+			scanf("%d%*c",&idade);
+			printf("Peso: ");
+			scanf("%f%*c",&peso);
+			printf("Altura (m): ");
+			scanf("%f%*c",&altura);
+			printf("\n");
+			
+			if(idade < 18){
+				menorD += 1;
+			}
+			
+			mediaIdade += idade;
+			mediaAltura += altura;
+			
+			if(peso > 80){
+				oitenta += 1;
+			}
+		}
+		printf("Ha %d jogadores menores de 18 anos nesse time.\n",menorD);
+		
+		mediaIdade = mediaIdade/2;
+		printf("Idade media do time: %f\n",mediaIdade);
+		
+		time++;
+	}while(time<=2);
+	
+	mediaAltura = mediaAltura/4;
+	printf("\nAltura media entre os times: %f\n",mediaAltura);
+	
+	oitenta = (oitenta/4)*100;
+	printf("Porcentagem de alunos com +80kg: %f \n",oitenta);	
+}
+*/
+
+
+// Exercicio 02
+
+
+// Exercicio 03
+/*
+	int main(){
+	int i = 1;
+	do{
+		printf("TABUADA DO %d:\n",i);
+		int m = 1;
+		for(m; m <= 10; m++){
+			float r = i*m;
+			printf("%d x %d = %f\n",i,m,r);
+		}
+		i++;
+		printf("\n");
+	}while(i<=10);
+	
+}
+*/
+
+// Exercicio 04
+/*
+int main(){
+	int n, f = 1;
+	printf("Digite um numero inteiro: ");
+	scanf("%d%*c",&n);
+	
+	if(n > 0){
+		while(n != 0){
+			f = f * n;
+			n--;
+		}
+		printf("Fatorial do numero digitado: %d",f);	
+	}
+	else
+		printf("Ignorar-lo-ei...");
+}
+*/
+
+// Exercicio 05
+/*
+int main(){
+	int mSeis = 0, meio = 0, mQuatro = 0;
+	float n ;
+	
+	printf("Digite uma nota: ");
+	do{
+		scanf("%f%*c",&n);
+		
+		if(n >= 6){
+			mSeis++;
+		}
+		else{
+			if(n < 4){
+				mQuatro++;
+			}
+			else{
+				meio++;
+			}
+		}
+		
+		printf("Digite uma nota: ");
+	}while(n >= 0);
+	
+	printf("\nDas notas digitadas:\n");
+	printf("%d sao maiores ou iguais a 6\n",mSeis);
+	printf("%d estao entre 4 e 6\n",meio);
+	printf("%d sao menores que 4\n",mQuatro);
+}
+*/
+
+// Exercicio 06
+int main(){
+	int n, i;
+	int num=1, den=1;
+	int tn=0, td=0;
+	printf("Digite um numero inteiro: ");
+	scanf("%d%*c",&n);
+	
+	printf("S =");
+	for(i=0; i < n; i++){
+		printf("%d/%d + ",num,den);
+		tn += num;
+		td += den;
+		num++;
+		den+=2;
+	}
+	printf("= %d/%d",tn,td);
+}
