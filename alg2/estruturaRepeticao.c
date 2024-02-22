@@ -69,7 +69,87 @@ int main(){
 
 
 // Exercicio 02
+// FOR
+/*
+int main(){
+	int num, div, flag;
+	printf("Digite um número maior que 1: ");
+	scanf("%d%*c",&num);
 
+	if(num == 2)
+		printf("2 eh um número primo!\n");
+	else{
+		flag = 0;
+		
+		for(div=2; div<num; div++){
+			if(num % div == 0)
+				flag = 1;
+		}
+		
+		if(flag == 0)
+			printf("%d e um numero primo\n",num);
+		else
+			printf("%d nao e um numero primo\n",num);
+	}
+	return 0;
+}
+*/
+
+//WHILE
+/*
+int main(){
+	int num, div, flag;
+	printf("Digite um número maior que 1: ");
+	scanf("%d%*c",&num);
+
+	if(num == 2)
+		printf("2 eh um número primo!\n");
+	else{
+		flag = 0;
+		div = 2;
+		
+		while(div < num){
+			if(num % div == 0)
+				flag = 1;
+			div++;
+		}
+		
+		if(flag == 0)
+			printf("%d e um numero primo\n",num);
+		else
+			printf("%d nao e um numero primo\n",num);
+	}
+	return 0;
+}
+*/
+
+//DO...WHILE
+/*
+int main(){
+	int num, div, flag;
+	printf("Digite um número maior que 1: ");
+	scanf("%d%*c",&num);
+
+	if(num == 2)
+		printf("2 eh um número primo!\n");
+	else{
+		flag = 0;
+		div = 2;
+		
+		do{
+			if(num % div == 0)
+				flag = 1;
+			div++;
+		}while(div != num);
+		
+		if(flag == 0)
+			printf("%d e um numero primo\n",num);
+		else
+			printf("%d nao e um numero primo\n",num);
+	}
+	return 0;
+}
+*/
 
 // Exercicio 03
 /*
