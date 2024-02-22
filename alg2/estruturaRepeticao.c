@@ -153,19 +153,17 @@ int main(){
 
 // Exercicio 03
 /*
-	int main(){
+int main(){
 	int i = 1;
 	do{
 		printf("TABUADA DO %d:\n",i);
-		int m = 1;
-		for(m; m <= 10; m++){
-			float r = i*m;
-			printf("%d x %d = %f\n",i,m,r);
+		int m;
+		for(m=1; m <= 10; m++){
+			printf("%d x %d = %d\n",i,m,i*m);
 		}
 		i++;
 		printf("\n");
-	}while(i<=10);
-	
+	}while(i<=10);	
 }
 */
 
