@@ -223,7 +223,7 @@ int main(){
 int main(){
 	int n;
 	int num=1, den=1, i;
-	int tn=0, td=0;
+	float valor, soma;
 	printf("Digite um numero inteiro: ");
 	scanf("%d%*c",&n);
 	
@@ -235,14 +235,15 @@ int main(){
 			
 		else
 			printf("%d/%d ",num,den);
+			
+			
+		valor = (float) num/den;
+		soma += valor;
 		
-		
-		tn += num;
-		td += den;
 		num++;
 		den+=2;
 	}
-	printf("= %d/%d",tn,td);
+	printf("= %f",soma);
 	return 0;
 }
 */
