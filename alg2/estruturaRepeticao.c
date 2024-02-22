@@ -141,20 +141,55 @@ int main(){
 */
 
 // Exercicio 06
+/*
 int main(){
-	int n, i;
-	int num=1, den=1;
+	int n;
+	int num=1, den=1, i;
 	int tn=0, td=0;
 	printf("Digite um numero inteiro: ");
 	scanf("%d%*c",&n);
 	
-	printf("S =");
+	printf("S = ");
 	for(i=0; i < n; i++){
-		printf("%d/%d + ",num,den);
+
+		if(i != n-1)
+			printf("%d/%d + ",num,den);
+			
+		else
+			printf("%d/%d ",num,den);
+		
+		
 		tn += num;
 		td += den;
 		num++;
 		den+=2;
 	}
 	printf("= %d/%d",tn,td);
+	return 0;
 }
+*/
+
+// Exercicio 07
+/*
+int main(){
+	int n;
+	int Fi=0, ant=1, antant=0;
+	
+	printf("Digite um numero inteiro: ");
+	scanf("%d%*c",&n);
+	
+	if(n > 0){
+		while(n != 0){
+			Fi = Fi + antant;
+			antant = ant;
+			ant = Fi;
+			n--;
+			printf("%d ",Fi);
+		}
+	}
+	else{
+		printf("Numero digitado invalido!");
+	}
+	return 0;
+}
+*/
