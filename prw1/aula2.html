@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // toString.call(variavel) mostra o tipo do array
+        // a = [1,2,3]
+        // b = [...a] - pega oq ta no a e poe no b (copia) MAIS NOVO
+
+        var vetor = ["banana","abacaxi","uva"]
+        console.log(vetor)
+
+        // PUSH/POP - add e remove no final
+        console.log('\npush/pop (final)')
+
+        vetor.push("maçã") 
+        console.log('add',vetor)
+        vetor.pop() 
+        console.log('remove',vetor)
+
+        // UNSHIFT/SHIFT - add e remove no começo
+        console.log('\nunshift/shift (começo)')
+
+        vetor.unshift("coco") 
+        console.log('add',vetor)
+        vetor.shift() 
+        console.log('remove',vetor)
+
+        // splice - retorna a lista que se retira
+        console.log('\nreturn do splice',vetor.splice(0,2))
+        console.log('\nresto do vetor',vetor)
+
+        //vetor.splice(1) pega do indice 1 até o final
+
+        var v = ["A","B","C","D","E","F"]
+        console.log('\nreturn do splice',v.splice(2,3,"IFSP"))
+        console.log('\nresto do vetor',v)
+
+        // de certa forma substitui (oq ta no 1  por IFSP)
+        var v1 = ["A","B","C","D","E","F"]
+        console.log('\nreturn do splice',v1.splice(2,1,"IFSP")) // no lugar no indice 2, coloca ifsp
+        console.log('\nresto do vetor',v1)
+
+        // add algo a partir da posição do primeiro parametro
+        var v2 = ["A","B","C","D","E","F"]
+        console.log('\nreturn do splice',v2.splice(2,0,"IFSP")) // no indice 2, coloca ifsp
+        console.log('\nresto do vetor',v2)
+
+
+        //slice (copia uma variavel inteira (sem parametro) ou especifica (especificando parametro))
+        var vetorAntigo = [1,2,3,4,5,6,'a']
+        var novoVetor = vetorAntigo.slice(3) //do 3 em diante
+        console.log(novoVetor)
+
+        //split igual em python
+        //join ideia reversa
+        //slides tem outros métodos uteis
+
+
+        // MAP - entra um vetor, sai outro, mas alguns dos valores podem mudar
+        //EXEMPLO CONVERTE °C EM °F
+        function f1(inp){
+            return inp * (9/5) + 32
+        }
+
+        var graus = [-10,0,10,20,30,40,50,60]
+        var fare = graus.map(f1)
+        console.log(fare)
+
+        // FILTER - pega o filtro e oq sai, sai igual quando entrou
+        // oq é true mantem e oq é false manda embora
+        function f2(inp){
+            if(inp.length > 3){
+                return true
+            }
+            return false
+        }
+
+        var nomes = ["maria","ana","","joão","ads"]
+        var resultados = nomes.filter(f2)
+        console.log(resultados)
+
+        // REDUCE - retorna uma unica coisa
+        function f3(acc,val){
+            return acc + val
+        }
+
+        var valores = [1,2,3,4,5,6]
+        var r = valores.reduce(f3)
+        console.log(r)   
+
+    </script>
+</body>
+</html>
