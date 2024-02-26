@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        function primos(qtde) {
+            var lista = Array();
+
+            if(qtde > 0){
+                let entrou = false
+                let primo = 1 
+                
+                while(lista.length !== qtde){
+
+                    for(let div = 2; div < primo; div++){
+
+                        if(primo % div === 0){
+                            entrou = true
+                        }
+
+                    }
+                    if(!entrou){
+                        lista.push(primo)
+                    }
+                    entrou = false
+                    primo++
+                }
+            }
+            
+            return lista
+        }
+        console.log(primos(0))//.toEqual([]);
+        console.log(primos(1))//.toEqual([1]);
+        console.log(primos(5))//.toEqual([1, 2, 3, 5, 7]);  
+        console.log(primos(10))//).toEqual([1, 2, 3, 5, 7, 11, 13, 17, 19, 23]);
+        */
+
+        /*
+        function palindromo(palavras) {
+        
+            function verifica(word){
+                word = word.toLowerCase()
+                let invert = word.split("").reverse().join("")
+                return invert === word
+            }
+
+            return palavras
+                .map(word => word.trim())
+                .filter(word => verifica(word))
+                .reduce((acc, word) => {
+                    acc.push(word);
+                    return acc;
+            }, []);
+
+        }
+        console.log(palindromo([]))//.toEqual([]);
+        console.log(palindromo(["abc", "def", "ghi"]))//.toEqual([]);
+        console.log(palindromo(["abc", "ovo", "ghi"]))//.toEqual(["ovo"]);
+        console.log(palindromo(["abc", "ovo", "ghi", "omo"]))//.toEqual(["ovo", "omo"]);
+        console.log(palindromo(["abc", "ovO", "ghi", "Omo"]))//.toEqual(["ovO", "Omo"]);
+        console.log(palindromo(["Socos", "ovO", "IFSP", "Radar", "Omo", "a", "A"]))//.toEqual(["Socos", "ovO", "Radar", "Omo", "a", "A"]);
+        */
+
+    </script>
+</body>
+</html>
