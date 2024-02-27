@@ -49,6 +49,19 @@
                 return invert === word
             }
 
+            var palindromos = palavras.filter(verifica)
+            return palindromos
+
+
+
+
+            /*
+            function verifica(word){
+                word = word.toLowerCase()
+                let invert = word.split("").reverse().join("")
+                return invert === word
+            }
+
             return palavras
                 .map(word => word.trim())
                 .filter(word => verifica(word))
@@ -56,7 +69,7 @@
                     acc.push(word);
                     return acc;
             }, []);
-
+            
         }
         console.log(palindromo([]))//.toEqual([]);
         console.log(palindromo(["abc", "def", "ghi"]))//.toEqual([]);
@@ -66,6 +79,206 @@
         console.log(palindromo(["Socos", "ovO", "IFSP", "Radar", "Omo", "a", "A"]))//.toEqual(["Socos", "ovO", "Radar", "Omo", "a", "A"]);
         */
 
+        /*
+        function perigoAcidente(altura_pes_aviao1, altura_met_aviao2) {
+
+            let alt_aviao2_pes = (altura_met_aviao2 / 0.3048)
+            let distancia; 
+
+            if(altura_pes_aviao1 > alt_aviao2_pes){
+                distancia = altura_pes_aviao1 - alt_aviao2_pes
+            }
+            else{
+                distancia = alt_aviao2_pes - altura_pes_aviao1
+            }
+  
+            if(distancia < 1000){
+                return true
+            }
+            else{
+                return false
+            }
+    
+        }
+
+        console.log(perigoAcidente(15000, 4572))//.toEqual(true);  15000 15000 > 0
+        console.log(perigoAcidente(1000, 1000))//.toEqual(false)   1000 3280 > 2280
+        console.log(perigoAcidente(-15000, -4572))//.toEqual(true); -15000 -15000  > 0
+        console.log(perigoAcidente(15000, -4572))//.toEqual(false);  15000 -15000 > 30000
+        console.log(perigoAcidente(-15000, 4572))//.toEqual(false);  -15000 15000 > 30000
+        console.log(perigoAcidente(10000, 2950))//.toEqual(true);    10000 9678   > 321
+        console.log(perigoAcidente(10000, 3100))//.toEqual(true);    10000 10170  > 170
+        */
+
+        /*
+        function apenasUnicos(lista) {
+            
+            function filtra(inp){
+                let cont = 0
+                for(let x = 0; x < lista.length; x++){
+                    if(inp === lista[x]){
+                        cont++
+                    }
+                }
+                if(cont === 1){
+                    return inp
+                }
+            }           
+            
+            let unicos = lista.filter(filtra)
+            return unicos
+
+        }
+        console.log(apenasUnicos([]))//.toEqual([]);
+        console.log(apenasUnicos([1]))//.toEqual([1]);
+        console.log(apenasUnicos([1, 1]))//.toEqual([]);
+        console.log(apenasUnicos([1, 2, 3, 1, 2, 4, 6, "IFSP", "S"]))//.toEqual([3, 4, 6, "IFSP", "S"]);
+        console.log(apenasUnicos(["a", "A", 1, 1.1, 1.2]))//.toEqual(["a", "A", 1, 1.1, 1.2]);
+        console.log(apenasUnicos([true]))//.toEqual([true]);
+        */
+
+        /*
+        function somaNumerosPares(qtde) {
+            
+            let soma = 0, cont = 0, pares = 0
+
+            while (pares !== qtde){
+                if(cont % 2 === 0){
+                    soma += cont
+                    pares++
+                }
+                cont++
+            }
+            return soma
+        }
+        console.log(somaNumerosPares(0))//.toEqual(0);
+        console.log(somaNumerosPares(1))//.toEqual(0);
+        console.log(somaNumerosPares(2))//.toEqual(2);
+        console.log(somaNumerosPares(3))//.toEqual(6);
+        console.log(somaNumerosPares(4))//.toEqual(12);
+        console.log(somaNumerosPares(100))//.toEqual(9900);
+        console.log(somaNumerosPares(2138))//.toEqual(4568906);
+        console.log(somaNumerosPares(81232))//.toEqual(6598556592);
+        */
+
+        /*
+        function dobro(valores) {
+            function mult(inp){
+                return inp * 2
+            }
+
+            let multiplicados = valores.map(mult);
+            return multiplicados
+        }
+        console.log(dobro([]))//.toEqual([]);
+        console.log(dobro([0]))//.toEqual([0]);
+        console.log(dobro([1, -1, 0, 0, 5.5, 10]))//.toEqual([2, -2, 0, 0, 11, 20]);
+        */
+
+        /*
+        function uniao(v1, v2) {
+            
+            let unidos = Array()
+
+            function filtra(inp){
+                if(unidos.indexOf(inp) === -1){
+                    unidos.push(inp)
+                    
+                }
+                return unidos
+            }
+
+            v1.filter(filtra)
+            v2.filter(filtra)
+            return unidos
+                     
+        }
+        console.log(uniao([], []))//.toEqual([]);
+        console.log(uniao([], [0]))//.toEqual([0]);
+        console.log(uniao([0], []))//.toEqual([0]);
+        console.log(uniao([1, 2, 3], [4, 5, 6]))//.toEqual([1, 2, 3, 4, 5, 6]);
+        console.log(uniao([1, 2, 3], [1, 2, 3]))//.toEqual([1, 2, 3]);
+        console.log(uniao([1, 2, 3], [1, 1, 1]))//.toEqual([1, 2, 3]);
+        console.log(uniao([true, 1, "a"], [true, 3]))//.toEqual([true, 1, "a", 3]);
+        console.log(uniao([true, 1, true, null], [1.0, 3]))//.toEqual([true, 1, null, 3]);
+        */
+
+        /*
+        function diff(v1, v2) {
+            let diferent = Array()
+
+            function checa(inp){
+                if(v2.indexOf(inp) === -1){
+                    diferent.push(inp)
+                    
+                }
+                return diferent
+            }
+
+            v1.filter(checa)
+            return diferent
+        }
+        console.log(diff([1, 2, 3], []))//.toEqual([1, 2, 3]);
+        console.log(diff([], [1, 2, 3]))//.toEqual([]);
+        console.log(diff([1, true, "IFSP", 3, 5, 10], [true, 5]))//.toEqual([1, "IFSP", 3, 10]);
+        console.log(diff([1, true, "IFSP", 3, 5, 10], [1, true, "IFSP", 3, 5, 10]))//.toEqual([]);
+        */
+
+        /*
+        function maior(v1, v2) {
+            function somar(acc,v){
+                return acc + v
+            }
+
+            let s1 = 0, s2 = 0
+
+            if(v1.length > 0){
+                s1 = v1.reduce(somar)
+            }
+            if(v2.length > 0){
+                s2 = v2.reduce(somar)
+            }
+            
+            if(s1 === s2){
+                return false
+            }
+            else{
+                if(s2 > s1){
+                    return v2
+                }
+                else{
+                    return v1
+                }
+            }
+        }
+        console.log(maior([], []))//.toEqual(false);
+        console.log(maior([], [1, 2, 3]))//.toEqual([1, 2, 3]);
+        console.log(maior([3, 2, 1], [1, 2, 3]))//.toEqual(false);
+        console.log(maior([3, 2, 1], [6]))//.toEqual(false);
+        console.log(maior([3, 2, 1], [5]))//.toEqual([3, 2, 1]);
+        console.log(maior([1, 2, 3, 4, 5], [-1, -2, -3, -4, -5]))//.toEqual([1, 2, 3, 4, 5]);
+        console.log(maior([-1, -2, -3, -4, -5], [-2, -3, -4, -5, -6]))//.toEqual([-1, -2, -3, -4, -5]);
+        console.log(maior([-2, -3, -4, -5, -6], [-1, -2, -3, -4, -5]))//.toEqual([-1, -2, -3, -4, -5]);
+        */
+
+        
+        function removeValores(valor, lista) {
+
+            function remove(npm){
+                return npm !== valor
+            }
+
+            let retorno = lista.filter(remove)
+            return retorno
+        }
+
+        console.log(removeValores(1, []))//.toEqual([]);
+        console.log(removeValores(1, [1]))//.toEqual([]);
+        console.log(removeValores(3, [3, 3, 3]))//.toEqual([]);
+        console.log(removeValores(true, [1, 2, 3, true]))//.toEqual([1, 2, 3]);
+        console.log(removeValores(0, [false, 1, true, true, false, 0]))//.toEqual([false, 1, true, true, false]);
+        console.log(removeValores(3, [0, "IFSP", -3, 10, 3, 3, true]))//.toEqual([0, "IFSP", -3, 10, true]);
+        
     </script>
 </body>
 </html>
