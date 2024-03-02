@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--  
+        AULA 01/03
+        document - documento com o codigo html 
+        window - manipulação da aba, como voltar e alterar o nome, aparecer prompts na tela
+
+        1. encontrar/selecionar elementos
+        2. detectar evento do usuario em um elemento da pagina
+        3. add, remover, modificar elemento na pagina
+        4. unir os tres acima em um único codigo fonte
+
+        (1)
+            document.getElementById("seletor")
+            document.getElementByTagName("seletor")
+            document.getElementByTagClassName("seletor") - retorna elementos com a classe
+
+            + ATUAIS 
+            document.querySelector("seletor css") - retorna o primeiro elemento que atende
+            document.querySelectorAll("seletor css") retorna a lista de elementos que atende
+
+                    COMANDO              //         SELECIONA
+            ...querySelector(".azul") -                 B
+            ...querySelectorAll(".azul")                [B,C]
+            ...getElementByTagName("button")            [A,B,C,D,E,F]
+            ...getElementByTagClassName("preto")        [B]
+            ...getElementById("abc")                    E
+            ...querySelector("button")                  A
+            ...querySelectorAll("[class]")              [B, C]
+            ...querySelector("[class=azul]")            C
+            ...querySelectorAll("button")[3]            D (retornaria tudo mas pega o elemento do ind 3 [A,B,C,D,E,F] 
+            ...getElementByTagClassName("azul")[1]      C (retornaria [B,C] mas pega o elemento do ind 1            
+
+            
+            SELECIONAR ELEMENTOS NA TELA
+            - .parentElement             - pai
+            - .nextElementSibling        - irmão mais novo - posterior
+            - .previousElementSibling    - irmão mais velha - anterior
+            - .children                  - filhos do elemento, LISTA
+
+    -->
+
+    <main>
+        <section>  
+            <article>
+                <div>
+                    <button>Origem</button>
+                </div>
+            </article>
+        </section>
+        <section>...</section>
+        <section>
+            Elemento que deseja selecionar
+        </section>
+    </main>
+
+    <script>
+        
+        let botao =  document.querySelector("button") 
+        console.log(botao)
+
+        botao = botao.parentElement
+        console.log(botao)
+
+        botao = botao.parentElement
+        console.log(botao)
+
+        botao = botao.parentElement
+        console.log(botao)
+
+        botao = botao.nextElementSibling
+        console.log(botao)
+
+        botao = botao.nextElementSibling
+        console.log(botao)
+
+    </script>
+
+
+</body>
+</html>
