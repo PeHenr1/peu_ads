@@ -120,3 +120,69 @@ switch(variavel):
 		blablabla
 	default:
 		blablabla
+
+============================================================
+
+STRINGS EM C
+
+* para usar apóstrofo, barra, aspas tem que usar uma barra invertida antes. EX: "caixa d\' agua" --> caixa d'agua
+* tomar cuidado pra o espaço de memoria de uma variavel não tomar o espaço de outra
+
+leitura:
+ - %s: le até espaço  tab ou enter, ou seja, nao pega "pedro h", pega só pedroc (nao recomendado
+ - gets: lê até achar o enter, nao define qtde de caracteres e pode ter problema de overflow (sobrescrever) (leva warning do geany)
+ - fgets (quando usar arquivo): lê até achar o enter, define caracteres e sem problema de overflow, te, parametros (vetor, qtde de caracteres e origem dos dados >stdin<) apesar disso ele tem problemas
+
+exibição:
+- printf, que nao pula linha sozinha
+- puts, que exibe somente string e pula linha sozinho
+
+
+char teste[11] - um vetor que age como string com 10 caracteres (uma linha) | LINHA 
+char teste[5][11] - 5 vetores que agem como string com 10 caracteres (cinco linhas e onze colunas) | LINHA / COLUNA
+char teste[3][5][5] - 3 vetores que agem como string com 5 colunas e 4 caracteres cada (tres linhas com cinco colunas de tamanho 4) | LINHA / COLUNA / TAMANHO
+
+↓↓↓ FUNÇÕES ↓↓↓
+
+COPIAR STRING
+* biblioteca <string.h> 
+* strcpy(queRecebe,queVaiSerCopiada) 
+** strcpy(queRecebe,queVaiSerCopiada,qtde_caracter) especifica o tamanho
+
+CONCATENAR STRINGS (tem que especificar o espaço antes)
+* strcat(str1,str2) - concatena a cadeia str2 com a cadeia str1 */
+* strncat(str1,str2,n) - concatena os n primeiros caracteres da cadeia str2  com a cadeia str1 
+
+COMPARAR STRINGS (compara duas strings e retornar)
+* variavel = strcmp(str1,str2)
+* retorna 0 - se as strings forem iguais
+* retorna nº < 0 - caso str1 seja alfabeticamente menor que str2
+* retorna nº > 0 - caso str1 for alfabeticamente maior que str2
+
+PEGAR Nº DE CARACTERES DA CADEIA (sem o terminador)
+* variavel = strlen(str1) - retorna o tamanho
+
+CONVERTE STRING PRA Nº INT E PRA Nº REAL    (precisa da biblioteca <stdlib.h>)
+int numero = atoi(string)
+double numero = strtod(string, NULL);
+
+↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+biblioteca <ctype.h> - funções para manipular caracteres (char)
+(RETORNA 0 SE É FALSO E QUALQUER Nº POSITIVO SE VERDADEIRO)
+...verifica se x é:
+* isalnum(x) - caracter alfanumérico
+* isalpha(x) - caracter alfabetico
+* isdigit(x) - caracter dígito
+* islower(x) - caracter minúsculo
+* isupper(x) - caracter maiúsculo
+* ispunct(x) - caracter pontuação
+* isspace(x) - se é espaço
+
+Conversão de strings para maiúsculas ou minúsculas (caracter por caracter)
+* tolower(x) - converte pra minusculo
+* toupper(x) - converte pra maiusculo
+
+
+
+
