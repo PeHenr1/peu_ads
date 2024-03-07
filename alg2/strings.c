@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 // Exercicio 01
 /*
@@ -40,7 +41,7 @@ int main(){
 int main(){
 	char vetor[5][20], letra[2];
 	
-	int i, j;
+	int i, j, flag = 0;
 	for(i=0;i<5;i++){
 		printf("Digite um nome [%d]: ",i+1);
 		gets(vetor[i]);
@@ -49,39 +50,49 @@ int main(){
 	printf("\nDigite um letra: ");
 	gets(letra);
 
-	printf("\nNomes que contem a letra digitada:\n");
 	for(i=0;i<5;i++){
 		int tamanho = strlen(vetor[i]);
 		for(j=0;j<tamanho;j++){
 			char temp[2] = {vetor[i][j], '\0'}; //transforma o caracter em uma ''string''
 			if(strcmp(letra, temp) == 0){
-				printf("%s\n",vetor[i]);
+				printf("- %s\n",vetor[i]);
+				flag = 1;
 				break;
+			
 			}
 		}
 	}
+	if(!flag) 
+		printf("Letra nao encontrada!");
+
 
 	return 0;
 }
 */
 
-// Exercicio 03 incompleto
+// Exercicio 03 
 /*
 int main(){
 	char palavra[20], invertida[20];
+	int i, tamanho, destino; 
+	
 	
 	printf("Digite uma palavra: ");
 	gets(palavra);
+	tamanho = strlen(palavra); 
 	
-	int tamanho = strlen(palavra)+1; // +1 pra ter espaço pro terminador
-	int i; 
-	for (i = 0; i < tamanho; i++) {
-		char temp[2] = {palavra[tamanho - i - 1], '\0'};
-		strcpy(invertida[i],temp);
-    }
+	for(i=0; i<tamanho;i++ ){
+		destino = (tamanho-1) - i;
+		invertida[destino] = palavra[i];
+	}
     invertida[tamanho] = '\0';
+	printf("Original: %s\nInvertida: %s\n",palavra,invertida);
 	
-	printf("- %s -	\n",invertida);
+	if( strcmp(palavra,invertida) == 0 )
+		printf("Palindromo!!!");
+	else
+		printf("Nao e palindromo!!!");
+		
 	
 	return 0;
 }
@@ -132,3 +143,57 @@ int main()
 */
 
 // Exercicio 06
+/*
+int main(){
+	char nome[20];
+	char sobrenome[20];
+	char completo[40];
+	int i, tam = 0;
+	
+	printf("Digite um nome: ");
+	gets(nome);
+	printf("Digite um sobrenome: ");
+	gets(sobrenome);
+	
+	strcpy(completo,nome);
+	strcat(completo," ");
+	strcat(completo,sobrenome);
+		
+	printf("\nNome completo: %s\n",completo);	
+	
+	int tamanho = strlen(completo);
+	for(i=0;i<tamanho;i++)
+		if( isspace(completo[i]) == 0 )
+			tam++;
+
+	printf("O nome digitado tem %d letras\n",tam);
+	printf("Primeiro letra do nome: %c\n",completo[0]);
+	printf("Ultima letra do nome: %c\n",completo[tamanho-1]);
+	
+	return 0;
+}
+*/
+
+// Exercicio 07
+/*
+int main(){
+	char nome[40];
+	int i;
+	
+	printf("Digite um nome: ");
+	gets(nome);
+	int tamanho = strlen(nome);
+	
+	for(i=0;i<tamanho;i++){
+		nome[i] = tolower(nome[i]);
+	}
+	printf("\nNome minusculo: %s\n",nome);
+	
+	for(i=0;i<tamanho;i++){
+		nome[i] = toupper(nome[i]);
+	}
+	printf("\nNome maiusculo: %s\n",nome);
+	
+	return 0;
+}
+*/
