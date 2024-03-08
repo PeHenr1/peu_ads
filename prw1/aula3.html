@@ -45,9 +45,28 @@
             - .previousElementSibling    - irmão mais velha - anterior
             - .children                  - filhos do elemento, LISTA
 
+        (2)
+            AULA 08/03 
+            selecionar > evento > manipula
+
+            click - Quando um elemento é clicado
+            dblclick - Quando um elemento é usado por dois cliques
+            focus - Quando um elemento ganhou foco (tab)
+            submit - Quando um formulário é considerado válido e os dados serão enviados ao destinatário
+
+            Remove a associação entre o evento "click" e a função "fazprimeiro"
+            el.removeEventListener("click", fazprimeiro);
+            
+            Remove todas as escutas de eventos, de todos eventos.
+            el.removeEventListener();
+
+
+        (3)
+            
     -->
 
     <main>
+        
         <section>  
             <article>
                 <div>
@@ -58,11 +77,15 @@
         <section>...</section>
         <section>
             Elemento que deseja selecionar
+            <button>Nao me pega só olá</button>
         </section>
     </main>
+    <div>
+        <button>Clique aqui</button>
+    </div>
 
     <script>
-        
+        /*
         let botao =  document.querySelector("button") 
         console.log(botao)
 
@@ -80,8 +103,59 @@
 
         botao = botao.nextElementSibling
         console.log(botao)
+        */
 
-    </script>
+        function tratarClique(e) {
+            console.log("Parabéns, cliquei no botão!")
+        }
+        let b = document.querySelector("button")
+        b.addEventListener("click", tratarClique)
+        //b.addEventListener("mouseover", tratarClique)
+
+        // OUTROS JEITOS
+        /*
+        1 - b.addEventListener("click", function() {
+            console.log("Olá")
+        })
+        2 - b.addEventListener("click", ()=> {
+            console.log("Olá")
+        })
+        */
+
+
+        function dizerOla(e) {
+            alert("Olá")
+            console.log(e.target)
+            console.log(e.type)
+        }
+        //AQUI É PRA VARIOS BUTTON FAZER A MESMA COISA
+        let bb = document.querySelectorAll("button")
+        for(let botao of bb) {
+            botao.addEventListener("click", dizerOla)
+        }
+        
+        
+
+        function fazprimeiro(e) {
+            console.log("Fiz primeiro")
+        }
+        function fazsegundo(e) {
+            console.log("Fiz segundo");
+        }
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", fazprimeiro);
+        btn.addEventListener("click", fazsegundo);
+
+
+        let div = document.querySelector("div")
+        let butt = document.querySelector("button")
+        div.addEventListener("click", (e) =>{console.log("Cliquei no div!")})
+        butt.addEventListener("click", (e) =>{
+            console.log("Cliquei no botão!") 
+            e.stopPropagation() // impede de pegar os pais avós e tal (propagração)
+        })
+        
+        </script>
 
 
 </body>
