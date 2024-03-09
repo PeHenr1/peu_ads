@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://www.google.com">Google</a>
+    <button>Comprar</button>
+    <input type="text" name="conteudo">
+    <div id="resultado">
+        <ul>
+            <li><span>1</span><button>Faz</button></li>
+            <li><span>2</span><button>Faz</button></li>
+            <li><span>3</span><button>Faz</button></li>
+            <li><span>4</span><button>Faz</button></li>
+            <li><span>5</span><button>Faz</button></li>
+            <li><span>6</span><button>Faz</button></li>
+        </ul>
+    </div>
+    <script>
+        function dizerOla(e) {
+            let alvo = e.target;
+            //console.log(e.type);
+            console.log(alvo.previousElementSibling)
+        }
+        let btns = document.querySelectorAll("button");
+        for (let btn of btns) {
+            btn.addEventListener("click", dizerOla);
+        }
+
+
+        let a = document.querySelector("a")
+        a.addEventListener("click",(e) => {
+            console.log("Eu vou pro google")
+            e.preventDefault() //nao deixa o 'a' fazer o evento padrao que ele tem de abrir o link, porem isso nao é javascript
+        })
+    </script>
+</body>
+
+</html>
