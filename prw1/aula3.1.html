@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p class="valor1" id="valor2">Conteúdo</p>
+        <input type="text" value="nome" placeholder="algo"><br>
+        <b class="valor1" id="valor3">Conteúdo</b>
+
+        <script>
+            // ALTERA O CONTEUDO
+            let e = document.querySelector("p")
+            let v = e.innerText
+            e.innerText = "Novo valor"
+
+            // ALTERA O VALOR
+            let i = document.querySelector("input")
+            let va = e.value
+            e.value = "novoValor"
+
+            // ALTERA OS ATRIBUTOS (class precisa de função especifica, vide slides)
+            let o = document.querySelector("b")
+            let vaL = e.getAttribute("class")
+            e.setAttribute = ("class","valor11")
+            console.log(vaL)
+            
+        </script>
+    </body>
+    </html>
