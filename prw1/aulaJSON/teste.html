@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="mIdade">CALCULAR MÉDIA IDADES</button>
+    <button id="iProfessores">MOSTRAR PROFESSORES</button>
+    <button id="casado">CASADO?</button>
+    <script>
+        let dados = [
+            {
+                "nome": "Pedro Henrique",
+                "idade": 19,
+                "matriculado": true,
+                "filhos": null,
+                "disciplinas": [
+                    {
+                        "nome": "PRW1",
+                        "professor": "Trojahn"
+                    },
+                    {
+                        "nome": "APR2",
+                        "professor": "Carlão"
+                    }
+                ]
+            },
+            {
+                "nome": "Abel",
+                "idade": 20,
+                "matriculado": true,
+                "filhos": 2,
+                "disciplinas": [
+                    {
+                        "nome": "PRW1",
+                        "professor": "Trojahn"
+                    },
+                    {
+                        "nome": "APR2",
+                        "professor": "Carlão"
+                    }
+                ]
+            },
+            {
+                "nome": "José da Silva Emanuel",
+                "idade": 21,
+                "matriculado": true,
+                "filhos": null,
+                "disciplinas": [
+                    {
+                        "nome": "PRW1",
+                        "professor": "Tiago"
+                    },
+                    {
+                        "nome": "APR2",
+                        "professor": "Carlão"
+                    }
+                ]
+            },
+            {
+                "nome": "Maria dos Santos",
+                "idade": 20,
+                "matriculado": true,
+                "filhos": "Pedro",
+                "disciplinas": [
+                    {
+                        "nome": "PRW1",
+                        "professor": "Tiago"
+                    },
+                    {
+                        "nome": "IWEB",
+                        "professor": "Carlão"
+                    }
+                ]
+            },
+            {
+                "nome": "Jerry",
+                "idade": 7,
+                "matriculado": true,
+                "filhos": null,
+                "disciplinas": [
+                    {
+                        "nome": "PRW1",
+                        "professor": "Trojahn"
+                    },
+                    {
+                        "nome": "APR2",
+                        "professor": "Carlão"
+                    },
+                    {
+                        "nome": "CAÇA",
+                        "professor": "Ratuncio"
+                    }
+                ],
+                "conjugue": "Jerra"
+            }
+        ]
+
+        //duas opções 
+        let nome = dados[1]["nome"]
+        nome = dados[1].nome
+
+
+        // calcular media das idades
+        function mediaIdades() {
+            let media = 0
+            for (let i = 0; i < dados.length; i++) {
+                media = media + dados[i].idade
+            }
+            /*
+            for(let pessoa of dados){
+                media = media + pessoa.idade
+            }
+            */
+            media = media / dados.length
+            console.log("Média das idades ", media)
+        }
+        let btn = document.querySelector("#mIdade");
+        btn.addEventListener("click", mediaIdades);
+
+        // mostra os professores
+        function imprimeProfessores() {
+            for (let pessoa of dados) {
+                console.log(pessoa.nome)
+                for (let disciplina of pessoa.disciplinas) {
+                    console.log(disciplina.professor)
+                }
+                console.log(".")
+            }
+            /*
+            for(let i=0;i<dados.length;i++){
+                console.log(dados[i].nome)
+                for(let j=0;j<dados.length;j++){
+                    console.log(dados[i].disciplinas[j].professor)
+                }
+                console.log(".")
+            }
+            */
+
+        }
+        let but = document.querySelector("#iProfessores");
+        but.addEventListener("click", imprimeProfessores);
+
+        // verifica se existe uma determinada chave
+        function Ecasado() {
+            for (let i = 0; i < dados.length; i++) {
+                if ("conjugue" in dados[i]) {
+                    console.log(dados[i].nome, "é casado com", dados[i].conjugue)
+                }
+                else {
+                    console.log(dados[i].nome, "não é casado")
+                }
+            }
+        }
+
+        let B = document.querySelector("#casado");
+        B.addEventListener("click", Ecasado);
+
+
+        /////////console.log(dados[4].nome, "é casado com", dados[4].conjugue)
+        // ALTERAR VALOR DE UMA CHAVE
+        dados[4].conjugue = "tua mãe"
+        /////////console.log(dados[4].nome, "é casado com", dados[4].conjugue)
+
+        // EXCLUI COM DELETE, NAO PODE COLOCAR UNDEFINED APENAS NULL
+        delete dados[4].conjugue
+        /////////console.log(dados[4].nome, "é casado com", dados[4].conjugue) //undefined pq nao existe
+
+    </script>
+</body>
+
+</html>

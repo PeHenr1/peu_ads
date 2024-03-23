@@ -1,0 +1,87 @@
+[
+    {
+        "nome": "Pedro Henrique",
+        "idade": 19,
+        "matriculado": true,
+        "filhos": null,
+        "disciplinas": [
+            {
+                "nome": "PRW1",
+                "professor": "Trojahn"
+            },
+            {
+                "nome": "APR2",
+                "professor": "Carlão"
+            }
+        ]
+    },
+    {
+        "nome": "Abel",
+        "idade": 20,
+        "matriculado": true,
+        "filhos": 2,
+        "disciplinas": [
+            {
+                "nome": "PRW1",
+                "professor": "Trojahn"
+            },
+            {
+                "nome": "APR2",
+                "professor": "Carlão"
+            }
+        ]
+    },
+    {
+        "nome": "José da Silva Emanuel",
+        "idade": 21,
+        "matriculado": true,
+        "filhos": null,
+        "disciplinas": [
+            {
+                "nome": "PRW1",
+                "professor": "Tiago"
+            },
+            {
+                "nome": "APR2",
+                "professor": "Carlão"
+            }
+        ]
+    },
+    {
+        "nome": "Maria dos Santos",
+        "idade": 20,
+        "matriculado": true,
+        "filhos": "Pedro",
+        "disciplinas": [
+            {
+                "nome": "PRW1",
+                "professor": "Tiago"
+            },
+            {
+                "nome": "IWEB",
+                "professor": "Carlão"
+            }
+        ]
+    },
+    {
+        "nome": "Jerry",
+        "idade": 7,
+        "matriculado": true,
+        "filhos": null,
+        "disciplinas": [
+            {
+                "nome": "PRW1",
+                "professor": "Trojahn"
+            },
+            {
+                "nome": "APR2",
+                "professor": "Carlão"
+            },
+            {
+                "nome": "CAÇA",
+                "professor": "Ratuncio"
+            }
+        ]
+    }
+
+]
