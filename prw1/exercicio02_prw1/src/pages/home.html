@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMC - Calcule seu IMC</title>
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <h1>IMC - Índice de Massa Corporal</h1>
+  </header>
+  <main>
+    <section>
+      <header>
+        <h2>Vejas as funcionalidades de nosso site:</h2>
+        <p>Abaixo você poderá calcular o IMC de uma pessoa e armazenar este dado em uma tabela.</p>
+      </header>
+      <div class="articles">
+        <article>
+          <header>
+            <h3>Calcule um IMC</h3>
+          </header>
+          <div>
+            <form autocomplete="off">
+              <div class="input">
+                <label for="name">Nome completo:</label>
+                <input type="text" name="name" id="name" required placeholder="Ex: Roberto Freitas">
+              </div>
+              <div class="input">
+                <label for="weight">Peso (em kg):</label>
+                <input type="number" name="weight" id="weight" min="1" step="0.5" required placeholder="Ex: 86.5">
+              </div>
+              <div class="input">
+                <label for="height">Altura (em cm):</label>
+                <input type="number" name="height" id="height" min="1" required placeholder="Ex: 178">
+              </div>
+              <div class="input">
+                <label>IMC (Índice de Massa Corporal): </label>
+                <div id="imc"></div>
+              </div>
+              <input type="submit" value="Cadastrar Dados" id="calculate">      
+            </form>
+          </div>
+          <div id="botoes">
+            <input type="button" value="Remover maior IMC" id="maiorIMC">
+            <input type="button" value="Remover menor IMC" id="menorIMC">
+          </div>
+        </article>
+        <article id="tabela">
+          <header>
+            <h3>USUÁRIOS CADASTRADOS</h3>
+          </header>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Nome</th>
+                      <th>Peso (em kg)</th>
+                      <th>Altura (em m)</th>
+                      <th>IMC</th>
+                      <th>Status</th>
+                      <th>Opções</th>
+                  </tr>
+              </thead>
+              <tbody id="dados">
+              </tbody>
+          </table>
+      </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido com ♥ por Matheus, Vinicius e Pedro Aissa</p>
+  </footer>
+  <script src="../scripts/app.js"></script>
+</body>
+
+</html>

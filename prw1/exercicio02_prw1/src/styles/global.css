@@ -1,0 +1,166 @@
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  font-family: DM Sans, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #3a0040;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto;
+  background-color: #d7cff3;
+}
+
+body > header {
+  grid-row: 1;
+  text-align: center;
+  margin: 20px 0px 20px 0px
+}
+
+main {
+  grid-row: 2;
+}
+
+main > section header {
+  text-align: center;
+  color: #291183;
+  margin-bottom: 20px;
+}
+
+main > section .articles{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  margin: 60px 0px 60px 0px;
+  justify-items: center;
+}
+
+main > section .articles form{
+  grid-row: 1;
+  grid-column: 1 / 2;
+  background-color: #3d1f91;
+  border-radius: 30px;
+  padding: 20px 40px 20px 40px;
+  max-width: 400px;
+  box-shadow: 1px 2px 10px 5px grey;
+}
+
+#botoes{
+  margin-top: 20px;
+  background-color: #3d1f91;
+  border-radius: 30px;
+  padding: 20px 40px 20px 40px;
+  max-width: 400px;
+  box-shadow: 1px 2px 10px 5px grey;
+  grid-row: 2;
+}
+
+#botoes input{
+  background-color: #FFFFD7;
+  border-radius: 15px;
+  width: 320px;
+  height: 30px;
+  color: #291183;
+  padding-left: 10px;
+}
+
+#botoes #maiorIMC{
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fdfdfd;
+}
+
+form input, form div div {
+  margin-bottom: 10px;
+  background-color: #FFFFD7;
+  border-radius: 15px;
+  width: 320px;
+  height: 30px;
+  color: #291183;
+  padding-left: 10px;
+}
+
+#calculate {
+  margin-top: 20px;
+  color: white;
+  background-color: #5842a8;
+}
+
+
+body > footer {
+  grid-row: 3;
+  color: #3a0040;
+  text-align: center;
+  margin: 10px 0px 10px 0px
+}
+
+table{
+  box-shadow: 1px 1px 8px 3px grey;
+}
+
+table, th, td {
+  position:static;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+thead{
+  background-color: white;
+}
+
+tr td{
+  background-color: #ccc9f1;
+}
+
+td button + button{
+  margin-left: 5px;
+}
+
+th, td{
+  width: 130px;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.plus, .minus, .exclude{
+  width: 30px;
+}
+
+input[type='submit'] + input[type='button']{
+  margin-top: 20px;
+}
+
+input[type='button']:hover{
+  box-shadow: 1px 1px 4px 2px rgb(252, 54, 113);
+}
+
+input[type='submit']:hover{
+  box-shadow: 1px 2px 6px 4px #1c0a4d;
+}
