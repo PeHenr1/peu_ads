@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19-04</title>
+</head>
+<body>
+
+    <section>
+        <article>
+            <div>
+                Digite seu Cep!
+            </div>
+            <div>
+                <form>
+                    <input type="text" maxlength="8" minlength="8" required>
+                    <button>Buscar Cep</button>
+                </form>
+            </div>
+        </article>
+    </section>
+
+
+    <script>
+        /*O que é assincrono? Ele não roda duas coisas ao mesmo tempo, mas sim pausa algo pra continuar outra coisa.
+        No modo sincrono: Alguém aperta o botão pra carregar uma lista de amigos, é solicitado ao servidor, e o server demora 3 segundos pra página surgir com essa lista.
+        Durante o tempo de espera, o site travava, pois ele tinha que terminar de receber a resposta do server para continuar o programa.
+        Após receber, a página recarregava inteira, e aparecia com a lista.
+
+        O Ajax, assincrono Java and xml, surgiu pra fazer com que o site não travasse mais após fazer uma requisição.
+        Como o comando fetch é assincrono, quer dizer que o código não é impedido pela requisição, rodando sem travar naquela requisição.
+
+        Dado o fetch, comando assincrono, quando ele acabar, o .then guarda o código que deve ser execultado após o fim da requisção.
+        O then gera um parametro que é a resposta do servidor, e você pode checar a resposta do mano, pra ver se deu bizil. Se n der, você pode continuar.
+
+        A resposta do fetch é um Json, com uma série de informações, como código, se deu certo, e a porra toda.
+
+        _\|/_ Makonha
+        */
+        function buscarCep(e){
+            e.preventDefault()
+
+            let cepBusca = document.querySelector("input").value;
+
+            let urlBusca = "https://viacep.com.br/ws/" + cepBusca + "/json";
+            console.log(urlBusca);
+
+            fetch(urlBusca).then((res) => {
+                if(!res.ok){
+                    console.log("Deu ruim menó.")
+                    return;
+                }
+                return res.json()
+            }
+            ).then((dadosCep) =>{
+                /*{
+    "cep": "13568-648",
+    "logradouro": "Rua Mariswaldo Ruggiero",
+    "complemento": "",
+    "bairro": "Residencial Parque Douradinho",
+    "localidade": "São Carlos",
+    "uf": "SP",
+    "ibge": "3548906",
+    "gia": "6373",
+    "ddd": "16",
+    "siafi": "7079"
+}*/
+                if("erro" in dadosCep){
+                    alert("Cep não encontrado!");
+                    return;
+                }
+                console.log(dadosCep);
+
+                let articleNovo = document.createElement("article");
+                let articleVelho = document.querySelector("article");
+                
+                articleVelho.insertAdjacentElement("afterend",articleNovo);
+
+                let div = document.createElement("div");
+
+                articleNovo.insertAdjacentElement("beforeend",div);
+                
+                
+
+                for(let chave in dadosCep){
+                    let p = document.createElement("p");
+                    p.innerHTML = dadosCep[chave];
+
+                    div.insertAdjacentElement("beforeend", p);
+                }
+
+
+
+                
+                
+
+
+            })
+        }
+
+        let button = document.querySelector("form");
+    
+
+        button.addEventListener("submit",buscarCep);
+
+
+
+    </script>    
+</body>
+</html>
