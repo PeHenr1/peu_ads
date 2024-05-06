@@ -1,2 +1,2 @@
 # peu_ads
-minhas coisas de ADS para facil acesso
+minhas coisas (códigos/exercícios/trabalhos) de ADS para facil acesso
