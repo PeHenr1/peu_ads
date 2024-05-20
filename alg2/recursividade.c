@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Exercicio 01
 /*
@@ -65,6 +66,51 @@ int main(){
 	scanf("%d%*c",&b);	
 	printf("%d elevado a %d = %d",a,b,potencia(a,b));
 		
+	return 0;
+}
+*/
+
+// Exercicio 04
+/*
+void invert(char texto[], int inicio, int fim){
+	if(inicio >= fim){
+		return;
+	}
+	
+	char temp = texto[inicio];
+	texto[inicio] = texto[fim];
+	texto[fim] = temp;
+	
+	invert(texto, inicio+1, fim-1);
+}
+int main(){
+	char ent[100];
+	printf("Digite uma string: ");
+	gets(ent);
+	
+	int tam = strlen(ent);
+	
+	invert(ent,0,tam-1);	
+	printf("Palavra invertida: %s\n",ent);
+
+	return 0;
+}
+*/
+
+// Exercicio 05
+/*
+float somatoria(int n, int d){
+	if(n == 1 && d == 1){
+		return 1;
+	}
+	return somatoria(n - 1, d - 2) + ( (float) n/d );
+		
+	
+}
+int main(){
+	int num = 10, den = 19;
+	printf("Somatoria: %f",somatoria(num,den));
+	
 	return 0;
 }
 */
