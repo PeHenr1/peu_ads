@@ -92,19 +92,21 @@ def alterar_preço(dic,cod,val):
 #a)
 def inserir(dic): 
     codigo = int(input("Código do produto: "))
-    info = []
-    nome = input("Produto: ")
-    preço = float(input("Preço: "))
-    quant = int(input("Quant. Estoque: "))
-    tupla = (preço,quant,)
-    info.append(nome)
-    info.append(tupla)
-
     if codigo not in dic:
+        info = []
+        nome = input("Produto: ")
+        preço = float(input("Preço: "))
+        quant = int(input("Quant. Estoque: "))
+        tupla = (preço,quant,)
+        info.append(nome)
+        info.append(tupla)
         dic[codigo] = info
         print("Produto cadastrado com sucesso!!!\n")
     else:
-        print("Produto não cadastrado!\nCódigo informado já atribuído a outro produto.\n")
+        print("Código informado já atribuído a outro produto.\n")
+    
+
+    
 
 def mostrar_todos(dic):
     if len(dic):
@@ -190,5 +192,5 @@ def menu():
 dicionario = {}
 ler_dados(dicionario)
 menu()
-inserir(dicio)
-gravar_dados(dicio)
+#inserir(dicio)
+#gravar_dados(dicio)
