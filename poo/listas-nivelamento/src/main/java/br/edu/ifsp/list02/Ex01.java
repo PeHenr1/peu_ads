@@ -22,7 +22,6 @@ public class Ex01 {
 
     public static void main(String[] args) {
 
-
         final int[] temperatures = new int[DAYS_IN_WEEK];
         final Scanner scanner = new Scanner(System.in);
 

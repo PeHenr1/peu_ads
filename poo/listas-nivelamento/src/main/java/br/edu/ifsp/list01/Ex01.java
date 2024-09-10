@@ -27,8 +27,8 @@ class Ex01 {
     String compute(int qtdLivros) {
         if (qtdLivros <= 0) return "Erro";
 
-        final double precoA = (0.25 * qtdLivros) + 7.5;
-        final double precoB = (0.5 * qtdLivros) + 2.5;
+        final double precoA = 0.25 * qtdLivros + 7.5;
+        final double precoB = 0.5 * qtdLivros + 2.5;
 
         if (precoA == precoB) return "Indiferente";
         if (precoA < precoB) return "Criterio A";
@@ -43,7 +43,7 @@ class Ex01 {
 
             MELHORANDO...
             if (qtdeLivros <= 0)return "Erro";
-            if(precoA > precoB)return "Criterio B";
+            if (precoA > precoB)return "Criterio B";
             if (precoB > precoA)return "Criterio A";
             return "Indeferente";
         */
