@@ -16,8 +16,10 @@ public class Hotel {
     }
 
     public Reservation makeReservation(Guest guest, int roomNumber, LocalDate checkin, LocalDate checkout){
-
-        Room room = null;
+        for (Room r : rooms){
+            r.asString();
+        }
+        Room room = new Room();
         for (int i = 0; i < rooms.length; i++) {
             if (rooms[i].getNumber() == roomNumber) {
                 room = rooms[i];
@@ -26,8 +28,8 @@ public class Hotel {
         }
         if (guest == null || !isAvailableAt(room, checkin, checkout)) return null;
 
-        reservations[countReservations++] = new Reservation(guest, room, checkin, checkout);
-        return new Reservation(guest, room, checkin, checkout);
+        room.setOccupied(true);
+        return reservations[countReservations++] = new Reservation(guest, room, checkin, checkout);
     }
 
     private boolean isAvailableAt(Room room, LocalDate checkin, LocalDate checkout){
@@ -55,9 +57,15 @@ public class Hotel {
     }
 
     public Reservation cancelReservation(String reservationId){
-        for (Reservation reservation : reservations){
-            if(reservation != null && reservation.getId().equals(reservationId)){
-                return reservation;
+
+        for (int i = 0; i < reservations.length; i++){
+            if(reservations[i].getId().equals(reservationId)){
+                Reservation canceledReservation = reservations[i];
+                for (int j = i; j < reservations.length-1; j++) {
+                    reservations[j] = reservations[j + 1];
+                }
+                canceledReservation.getRoom().setOccupied(false);
+                return canceledReservation;
             }
         }
         return null;

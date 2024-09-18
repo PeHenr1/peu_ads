@@ -1,14 +1,16 @@
 package org.example;
 
 public class Room {
-    private final int number;
+    private int number;
     private double price;
     private boolean occupied;
 
     public Room(int number, double price){
         this.number = number;
         this.price = price;
-        this.occupied = true;
+    }
+
+    public Room() {
     }
 
     public String asString(){
@@ -26,4 +28,10 @@ public class Room {
     public int getNumber() {
         return number;
     }
+
+    public void setOccupied(boolean occupied) {
+        this.occupied = occupied;
+    }
+
+
 }

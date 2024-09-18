@@ -24,7 +24,10 @@ public class Main {
         Reservation res2 = hotel.makeReservation(guest2, 105, LocalDate.of(2024, 10, 15), LocalDate.of(2024, 10, 20));
         System.out.println(res2.asString());
 
-        Reservation cancelled = hotel.cancelReservation(res1.asString().split(",")[0].split(":")[1].trim());
-        System.out.println(cancelled);
+        Reservation res3 = hotel.makeReservation(guest2, 105, LocalDate.of(2024, 10, 15), LocalDate.of(2024, 10, 20));
+        System.out.println(res3.asString());
+
+        Reservation cancelled = hotel.cancelReservation(res1.getId());
+        System.out.println(cancelled.asString());
     }
 }

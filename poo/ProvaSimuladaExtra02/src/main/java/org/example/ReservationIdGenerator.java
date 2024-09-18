@@ -15,9 +15,7 @@ public class ReservationIdGenerator {
         String seconds = String.format("%02d",now.getSecond());
         String minutes = String.format("%02d",now.getMinute());
 
-        int currentSequencialNumber = sequencialNumber++;
-
-        return String.format("HT%s-%s-%s-%05d", seconds, minutes, seconds, currentSequencialNumber);
+        return String.format("HT%s-%s-%s-%05d", seconds, minutes, seconds, ++sequencialNumber);
     }
 
 }
